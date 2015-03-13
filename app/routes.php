@@ -17,7 +17,12 @@ Route::get('/', function()
 });
 
 
-
 Route::get('login', 'HomeController@showLogin');
 
 Route::post('login','HomeController@doLogin');
+
+Route::get('register','RegistrationController@showForm');
+Route::post('register','RegistrationController@process');
+
+Route::get('dashboard','HomeController@Dashboard');
+Route::get('logout','HomeController@logout');

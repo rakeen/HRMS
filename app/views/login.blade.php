@@ -1,4 +1,4 @@
-// this page is taken from: https://scotch.io/tutorials/simple-and-easy-laravel-login-authentication
+{{-- this page is taken from: https://scotch.io/tutorials/simple-and-easy-laravel-login-authentication --}}
 <!doctype html>
 <html>
 	<head>
