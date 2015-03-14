@@ -59,12 +59,16 @@ class HomeController extends BaseController {
     		);
 
 			if (Auth::attempt($userdata)) {
-				// redirect to secure page
-				Redirect::to('dashboard'); // dashboard not registered. how to redirect??
-				//echo "Success! You are now logged in"; // echoing in controller is BAD!
+				$uName=Auth::user()->first_name;
+				$uName.="  ";
+				$uName.=Auth::user()->last_name;
+				
+				return Redirect::to('dashboard');
+				//return Redirect::route('dashboard')->with('user_name',$uName);
+				//return View::make('users.dashboard',array('user_name'=>$uName));				
 
 				// if authentication successful we can access user data
-				echo "Hello ".Auth::user()->first_name."!";
+				//echo "Hello ".Auth::user()->first_name."!";
 			}
 			else{
 				return Redirect::to('login');
@@ -74,7 +78,7 @@ class HomeController extends BaseController {
 	}
 
 	public function Dashboard(){
-		Return View::make('dashboard');
+		Return View::make('users.dashboard');
 	}
 
 	public function logout(){
