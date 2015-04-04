@@ -63,10 +63,9 @@ class HomeController extends BaseController {
 				$uName.="  ";
 				$uName.=Auth::user()->last_name;
 				
-				return Redirect::to('dashboard');
-				//return Redirect::route('dashboard')->with('user_name',$uName);
-				//return View::make('users.dashboard',array('user_name'=>$uName));				
-
+				
+				return Redirect::route('dashboard')->with('user_name',$uName);
+				//return View::make('users.dashboard');				
 				// if authentication successful we can access user data
 				//echo "Hello ".Auth::user()->first_name."!";
 			}

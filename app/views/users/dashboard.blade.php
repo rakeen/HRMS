@@ -235,13 +235,21 @@
             <li class="dropdown">
                 <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                     <img alt="" src="images/avatar1_small.jpg">
-                    <span class="username"><!-- user_name --></span>
+                    <span class="username">
+                        <?php
+                            $uName=Auth::user()->first_name;
+                            $uName.="  ";
+                            $uName.=Auth::user()->last_name;
+                        ?>
+                        {{-- Session::get('user_name') --}}
+                        {{ $uName }}
+                    </span>
                     <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu extended logout">
                     <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
                     <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
-                    <li><a href="login.html"><i class="fa fa-key"></i> Log Out</a></li>
+                    <li><a href="/logout"><i class="fa fa-key"></i> Log Out</a></li>
                 </ul>
             </li>
             <!-- user login dropdown end -->
@@ -382,7 +390,7 @@
         </div>
         
     </aside>
-    
+
     <section id="main-content">
         <section class="wrapper">
             <div class="row">
@@ -395,6 +403,11 @@
                         </div>
                     </section>
                 </div>
+
+                <div class="col-md-9">
+                    @include('users.profile')
+                </div>
+                
             </div>
         </section>
     </section>

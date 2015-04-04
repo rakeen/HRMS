@@ -1,4 +1,6 @@
 <?php
+// This File is For Learning Purpose only
+// it has nothing to do with the production verion
 
 use Illuminate\Auth\UserTrait;
 use Illuminate\Auth\UserInterface;
@@ -14,13 +16,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 *
 	 * @var string
 	 */
-	protected $table = 'users';
-
-	/**
-	 * The attributes excluded from the model's JSON form.
-	 *
-	 * @var array
-	 */
-	protected $hidden = array('password', 'remember_token');
+	protected $table = 'users'; // if you don't define it laravel will assume the table name is plural of its class
+		
 
 }

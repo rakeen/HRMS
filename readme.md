@@ -23,3 +23,22 @@ Documentation for the entire framework can be found on the [Laravel website](htt
 ### License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+
+-------------------------------------------------------------------
+
+### ToDo:
+
+- fix the redirect with value thing
+
+
+### Problems Faced:
+
+- Git fetch/pull,upstreaming
+- Form Hidden Field
+- Pass a variable through controller into a view || use Session::get()
+- Reseting Migrations
+
+
+### Reference:
+
+- 
