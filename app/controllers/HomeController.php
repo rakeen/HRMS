@@ -53,21 +53,21 @@ class HomeController extends BaseController {
 	        	->withInput(Input::except('password')); // send back the input (not the password) so that we can repopulate the form
 		}
 		else{
+
 			$userdata = array(
       			'email'     => Input::get('email'),
         		'password'  => Input::get('password')
     		);
 
+
 			if (Auth::attempt($userdata)) {
-				$uName=Auth::user()->first_name;
-				$uName.="  ";
-				$uName.=Auth::user()->last_name;
+
+				//$uName=Auth::user()->UserInfo->last_name;
+				//echo $uName;
 				
-				
-				return Redirect::route('dashboard')->with('user_name',$uName);
+				return Redirect::route('dashboard');
+				//return Redirect::to('dashboard');
 				//return View::make('users.dashboard');				
-				// if authentication successful we can access user data
-				//echo "Hello ".Auth::user()->first_name."!";
 			}
 			else{
 				return Redirect::to('login');
@@ -77,7 +77,7 @@ class HomeController extends BaseController {
 	}
 
 	public function Dashboard(){
-		Return View::make('users.dashboard');
+		return View::make('users.dashboard');
 	}
 
 	public function logout(){

@@ -28,7 +28,13 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ### ToDo:
 
-- fix the redirect with value thing
+- process multiple forms in a page
+- link to profile of other user
+- login with email and delete email from CurrentUser table
+- uncomment css font and cdnjs files on dashboard and style.css
+
+- paginated notice,elist
+- search(data binding?) in notice,elist
 
 
 ### Problems Faced:
@@ -38,6 +44,18 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 - Pass a variable through controller into a view || use Session::get()
 - Reseting Migrations
 
+- problem with auth after refactoring the db tables
+- register controller with multiple form in a single page
+
+### Things to look in future:
+
+- return Redirect::to()
+- return Redirect::route()
+- must have id field if you use any different model for auth
+- must specify model and db table in auth config
+- specify model relations for easy access of data
+- model relations must specify both the foreign key and local key
+- Auth::User() doesn't change. even if you change your model name
 
 ### Reference:
 

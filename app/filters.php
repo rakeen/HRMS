@@ -51,6 +51,7 @@ Route::filter('auth', function()
 
 Route::filter('auth.basic', function()
 {
+	//Config::set('auth.model', 'User');
 	return Auth::basic();
 });
 

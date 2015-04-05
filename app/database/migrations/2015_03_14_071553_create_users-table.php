@@ -20,9 +20,7 @@ class CreateUsersTable extends Migration {
 
 			$table->string('first_name',32);
 			$table->string('last_name',32);
-			$table->string('username',32);
 			$table->string('email',120);
-			$table->string('password',64);
 
 			$table->string('remember_token', 100)->nullable();
 

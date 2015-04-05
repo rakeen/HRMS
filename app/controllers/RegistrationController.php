@@ -12,10 +12,7 @@ class RegistrationController extends BaseController{
 	public function process(){
 		
 		$rules = array(
-			'firstname'=>'required|alpha|min:2',
-			'lastname'=>'required|alpha|min:2',
-			'email'=>'required|email|unique:users',
-			'username'=>'required|unique:users',
+			'email'=>'required|email|exists:users_info,email',
 			'password'=>'required|alpha_num|between:6,12|confirmed',
 			'password_confirmation'=>'required|alpha_num|between:6,12'
 		);
@@ -23,15 +20,28 @@ class RegistrationController extends BaseController{
 		$validator = Validator::make(Input::all(),$rules);
 
 		if($validator->passes()){
-			$user = new User;
-			$user->first_name = Input::get('firstname');
-			$user->last_name = Input::get('lastname');
-			$user->username = Input::get('username');
-			$user->email = Input::get('email');
+			$user = new CurrentUser;			
+
+			$userID = "SE".str_random(3);
+
+			while( CurrentUser::where('userID','=',$userID)->first() ){
+				$userID = "SE".str_random(3);
+			}
+
+			$user->userID = $userID;
 			$user->password = Hash::make(Input::get('password'));
+			$user->user_type = "Employee";
+			$user->email = Input::get('email');
 			$user->save();
 
-			//return View::make("success");
+			
+			$userInfo = UserInfo::where('email','=',Input::get('email'))
+								->update(array('userID'=>$userID));
+
+			$up = new UserProfile;
+			$up->userID=$userID;
+			$up->save();
+
 			echo "success";
 		}
 		else{

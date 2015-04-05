@@ -5,7 +5,9 @@
 </head>
 <body>
 	<h2>Registration</h2>
-
+	<h4>
+		{{ Session::get('message') }}
+	</h4>
 
 	{{ Form::open(array('url'=>'register', 'class'=>'form-signup')) }}		
 
@@ -15,12 +17,7 @@
 			@endforeach
 		</ul>
 
-		{{ Form::text('firstname', null, array('class'=>'input-block-level', 'placeholder'=>'First Name')) }}
-		<br>
-		{{ Form::text('lastname', null, array('class'=>'input-block-level', 'placeholder'=>'Last Name')) }}
-		<br>
-		{{ Form::text('username', null, array('class'=>'input-block-level', 'placeholder'=>'Username')) }}
-		<br>
+		
 		{{ Form::text('email', null, array('class'=>'input-block-level', 'placeholder'=>'Email Address')) }}
 		<br>
 		{{ Form::password('password', array('class'=>'input-block-level', 'placeholder'=>'Password')) }}
