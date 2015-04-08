@@ -17,7 +17,20 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
+Route::get('apply',function(){
+	return View::make('apply');
+});
+Route::post('apply',array(
+	'uses'=>'HomeController@applyCareer'
+));
 
+/*
+Route::model('user','CurrentUser');
+Route::get('profile/{user}', function(CurrentUser $user)
+{	
+    echo $user->userID;
+});
+*/
 
 Route::get('login', 'HomeController@showLogin');
 Route::post('login','HomeController@doLogin');
@@ -50,7 +63,12 @@ Route::post('profile',array(
 ));
 
 Route::get('elist',array(
+	"before"=>'auth',
 	"uses"=>"UserController@elist"
+));
+Route::get('recruite',array(
+	"uses"=>"UserController@recruite",
+	"before"=>'auth',
 ));
 
 Route::get('logout','HomeController@logout');
@@ -63,3 +81,53 @@ Route::post('notice', array(
 	"before"=>'auth',
 	"uses"=>'ManagerController@postNotice'
 ));
+
+Route::get('leave',array(
+	"before"=>'auth',
+	"uses"=>'UserController@leave'
+));
+Route::post('leave',array(
+	"before"=>'auth',
+	"uses"=>'UserController@postLeave'
+));
+
+Route::get('review-leave',array(
+	"before"=>'auth',
+	"uses"=>'UserController@review_leave'	
+));
+Route::post('review-leave',array(
+	"before"=>'auth',
+	"uses"=>'UserController@post_review_leave'
+));
+
+
+Route::post('notice', array(
+	"before"=>'auth',
+	"uses"=>'ManagerController@postLeave'
+));
+
+
+Form::macro('date', function()
+{
+    return '<div class="input-group input-large form-group input-lg" data-date="13/07/2013" data-date-format="mm/dd/yyyy">
+                                        <input type="text" class=" form-control dpd1" name="from">
+                                        <span class=" input-group-addon">To</span>
+                                        <input type="text" class=" form-control dpd2" name="to">
+                                    </div>';
+});
+Form::macro('toggle',function($name,$on,$off){	
+
+	$x = '<input type="checkbox" checked class="switch-large" id="animated-switch" checked data-off="danger" data-animated="true" data-on-label=';
+	$x.=$on;
+	$x.=' data-off-label=';	
+	$x.=$off;
+	$x.=' name=';
+	$x.=$name;
+	$x.=' >';
+	return $x;	
+});
+
+
+Route::get('blank',function(){
+	return View::make('blank');
+});

@@ -338,8 +338,8 @@
                                     <div class="col-lg-6">
                                         
                                         <?php $git=Auth::user()->UserProfile->github_id; ?>
-                                        {{ Form::text('g-plus',$git,array('class'=>'form-control', 
-                                                                            'id'=>'g-plus',
+                                        {{ Form::text('github',$git,array('class'=>'form-control', 
+                                                                            'id'=>'github',
                                                                             'type'=>'text'
                                                                             ))}}
                                     </div>

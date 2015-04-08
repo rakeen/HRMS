@@ -85,4 +85,18 @@ class HomeController extends BaseController {
 		return Redirect::to('login')->with('message','You are now logged out');
 	}
 
+	public function applyCareer(){
+		$u = new UserInfo;
+		$u->first_name = Input::get('first_name'); 
+		$u->last_name = Input::get('last_name');
+		$u->email = Input::get('email');
+		$u->age = Input::get('age');
+		$u->sex = Input::get('sex');
+		$u->phone = Input::get('phone');
+		$u->address = Input::get('address');
+		$u->save();
+
+		return Redirect::to('apply')->with('message',"successfully registered");
+	}
+
 }

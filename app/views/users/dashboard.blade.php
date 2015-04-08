@@ -28,6 +28,7 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
+    @yield('style')
 </head>
 
 
@@ -300,8 +301,7 @@
 <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script> -->
 <script src="assets/calendar/moment-2.2.1.js"></script>
 <script src="js/calendar/evnt.calendar.init.js"></script>
-<script src="assets/jvector-map/jquery-jvectormap-1.2.2.min.js"></script>
-<script src="assets/jvector-map/jquery-jvectormap-us-lcc-en.js"></script>
+
 <script src="assets/gauge/gauge.js"></script>
 <!--clock init-->
 <script src="assets/css3clock/js/script.js"></script>
@@ -323,7 +323,7 @@
 <script src="js/custom-select/jquery.customSelect.min.js" ></script>
 <!--common script init for all pages-->
 <script src="js/scripts.js"></script>
-
 <!--script for this page-->
+@yield('script')
 </body>
 </html>

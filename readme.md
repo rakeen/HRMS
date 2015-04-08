@@ -28,7 +28,6 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ### ToDo:
 
-- process multiple forms in a page
 - link to profile of other user
 - login with email and delete email from CurrentUser table
 - uncomment css font and cdnjs files on dashboard and style.css
@@ -46,6 +45,9 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 - problem with auth after refactoring the db tables
 - register controller with multiple form in a single page
+- can I use raw html form?
+
+- Sidebar Toggle not working in review-leave after adding the toggle switch button
 
 ### Things to look in future:
 
