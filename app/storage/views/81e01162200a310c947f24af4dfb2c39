@@ -1,0 +1,12 @@
+<?php
+
+$currentDateTime= date('Y-m-d h:i:s');
+echo $currentDateTime;
+?>
+
+<?php echo Form::open(array('action' => 'UserController@postCheckIn', 'method'=> 'post')); ?>	
+	<?php echo Form::hidden('checkin',$currentDateTime); ?>
+
+	<?php echo Form::submit('Check-In'); ?>
+
+<?php echo Form::close(); ?>

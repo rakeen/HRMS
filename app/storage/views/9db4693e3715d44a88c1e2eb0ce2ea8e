@@ -1,0 +1,23 @@
+<?php $utype = Auth::user()->user_type; ?>
+
+
+<?php $__env->startSection('main'); ?>
+	<div class="row">
+	    
+	    	<?php $notices = Notice::all() ?>
+	    	<?php foreach($notices as $notice): ?>
+	    		<div class="panel col-md-12">
+	    			<p class="panel-body">
+	    				<?php echo $notice->notice; ?>
+
+	    			</p>
+	    		</div>
+	    	<?php endforeach; ?>
+	    
+	</div>
+
+	<?php if($utype=="Manager"): ?>
+		<?php echo $__env->make('users.manager.notice', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+	<?php endif; ?>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('users.dashboard', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

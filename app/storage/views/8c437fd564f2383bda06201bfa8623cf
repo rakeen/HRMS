@@ -1,0 +1,8 @@
+<?php /* 
+	tutorial: http://www.lswebapps.com/2014/06/23/laravel-login-registration-system-implementing-login/
+ */ ?>
+
+<?php echo hello user!; ?>
+
+
+<h1>Welcome</h1>

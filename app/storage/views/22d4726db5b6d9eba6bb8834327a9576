@@ -1,0 +1,69 @@
+<?php /* dashboard for employee */ ?>
+<?php $xx=Auth::user()->user_type; ?>
+<?php if( $xx=="Employee"): ?>
+    
+<?php else: ?>
+    
+<?php endif; ?>
+
+<?php $__env->startSection('main'); ?>
+	<div class="row">
+        <div class="col-md-3">
+
+            <section class="panel">
+                <div class="panel-body">
+                    <h4>Checkin</h4>
+                    <?php echo $__env->make('users.checkin', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+                </div>
+            </section>
+        </div>
+
+        <div class="col-md-9">
+            <?php echo $__env->make('users.profile', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        </div>
+        
+    </div>
+
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('sidebar'); ?>
+    <aside>
+        <div id="sidebar" class="nav-collapse">
+            <!-- sidebar menu start-->
+            <div class="leftside-navigation">
+                <ul class="sidebar-menu" id="nav-accordion">
+                    
+                    <li>
+                        <a class="active" href="index.html">
+                            <i class="fa fa-dashboard"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="sub-menu">
+                        <a href="/profile">
+                            <i class="fa fa-laptop"></i>
+                            <span>Profile</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="boxed_page.html">Boxed Page</a></li>
+                            <li><a href="horizontal_menu.html">Horizontal Menu</a></li>
+                            <li><a href="language_switch.html">Language Switch Bar</a></li>
+                        </ul>
+                    </li>
+
+                    
+                    <li>
+                        <a href="/notice">
+                            <i class="fa fa-bullhorn"></i>
+                            <span>Notice</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>        
+    </aside>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('users.employee.dashboard', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php echo $__env->make('users.dashboard', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

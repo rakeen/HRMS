@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h2>Registration</h2>
+	<h4>
+		<?php echo Session::get('message'); ?>
+
+	</h4>
+
+	<?php echo Form::open(array('url'=>'register', 'class'=>'form-signup')); ?>		
+
+		<ul>
+			<?php foreach($errors->all() as $error): ?>
+				<li><?php echo $error; ?></li>
+			<?php endforeach; ?>
+		</ul>
+
+		
+		<?php echo Form::text('email', null, array('class'=>'input-block-level', 'placeholder'=>'Email Address')); ?>
+
+		<br>
+		<?php echo Form::password('password', array('class'=>'input-block-level', 'placeholder'=>'Password')); ?>
+
+		<br>
+		<?php echo Form::password('password_confirmation', array('class'=>'input-block-level', 'placeholder'=>'Confirm Password')); ?>
+
+		<br>
+		<?php echo Form::submit('Register', array('class'=>'btn btn-large btn-primary btn-block')); ?>
+
+		<?php echo Form::close(); ?>
+
+
+</body>
+</html>

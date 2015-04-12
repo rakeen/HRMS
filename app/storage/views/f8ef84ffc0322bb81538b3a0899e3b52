@@ -1,0 +1,12 @@
+<?php
+
+$currentDateTime= date('Y-m-d h:i:s');
+echo $currentDateTime;
+?>
+
+<?php echo Form::open(array('url' => 'checkin')); ?>
+
+	
+	<?php echo Form::submit('Submit!'); ?>
+
+<?php echo Form::close(); ?>

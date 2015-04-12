@@ -1,0 +1,46 @@
+<?php /* this page is taken from: https://scotch.io/tutorials/simple-and-easy-laravel-login-authentication */ ?>
+<!doctype html>
+<html>
+	<head>
+		<title>Login</title>
+	</head>
+
+	<body>
+
+
+	<?php /* default vs Specific open()  :   http://laravel-recipes.com/recipes/124/opening-a-new-html-form */ ?>
+
+	<?php echo Form::open(array('url' => 'login')); ?>
+
+
+	<h1>Login</h1>
+
+	<!-- if there are login errors, show them here -->
+	<p>
+	    <?php echo $errors->first('email'); ?>
+
+	    <?php echo $errors->first('password'); ?>
+
+	</p>
+
+	<p>
+	    <?php echo Form::label('email', 'Email Address'); ?>
+
+	    <?php echo Form::text('email', Input::old('email'), array('placeholder' => 'awesome@awesome.com')); ?>
+
+	</p>
+
+	<p>
+	    <?php echo Form::label('password', 'Password'); ?>
+
+	    <?php echo Form::password('password'); ?>
+
+	</p>
+
+	<p><?php echo Form::submit('Submit!'); ?></p>
+	<?php echo Form::close(); ?>
+
+
+
+	</body>
+</html>

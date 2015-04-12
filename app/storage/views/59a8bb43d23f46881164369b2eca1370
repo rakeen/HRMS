@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Apply</title>
+	<?php echo HTML::style('bs3/css/bootstrap.min.css'); ?>
+
+	<?php echo HTML::style('assets/font-awesome/css/font-awesome.css'); ?>
+
+	<?php echo HTML::style('css/style.css'); ?>
+
+</head>
+<body>
+
+<?php if( Session::has('message') ): ?>
+<div class="alert alert-success alert-block fade in">
+	<button data-dismiss="alert" class="close close-sm" type="button">
+		<i class="fa fa-times"></i>
+	</button>
+
+	<?php echo Session::get('message'); ?>
+
+</div>
+<?php endif; ?>
+
+<div class="row">
+	<div class="col-md-2"></div>
+	
+	<div class="col-md-8">
+		<div class="panel">
+			<div class="panel-body">
+			<?php echo Form::open(array('url'=>'apply', 'class'=>'position-center')); ?>
+
+				
+				
+				<?php echo Form::text('first_name',null,array('class'=>'form-group form-control input-block-level input-lg', 'placeholder'=>'First Name') ); ?>
+
+				<?php echo Form::text('last_name',null,array('class'=>'form-group form-control input-block-level input-lg', 'placeholder'=>'Last Name') ); ?>
+
+				
+				<?php echo Form::text('age',null,array('class'=>'form-group form-control input-block-level input-lg', 'placeholder'=>'Age') ); ?>
+
+				<?php echo Form::text('sex',null,array('class'=>'form-group form-control input-block-level input-lg', 'placeholder'=>'Sex') ); ?>
+
+				
+				<div class="input-group input-group-lg">
+				<span class="input-group-addon btn-white"><i class="fa fa-phone"></i></span>
+				<?php echo Form::text('phone',null,array('class'=>'form-group form-control input-block-level input-lg', 'placeholder'=>'Phone') ); ?>				
+				</div>
+				<?php echo Form::text('address',null,array('class'=>'form-group form-control input-block-level input-lg', 'placeholder'=>'Address') ); ?>
+
+
+				<?php echo Form::text('email', null, array('class'=>'form-group form-control input-block-level input-lg', 'placeholder'=>'Email Address')); ?>
+
+				<?php echo Form::password('password', array('class'=>'form-group form-control input-lg input-block-level', 'placeholder'=>'Password')); ?>
+
+				<?php echo Form::password('password_confirmation', array('class'=>'form-group form-control input-lg input-block-level', 'placeholder'=>'Confirm Password')); ?>
+
+
+				
+				<?php echo Form::submit('Apply', array('class'=>'form-control input-lg btn btn-large btn-primary btn-block')); ?>
+
+			<?php echo Form::close(); ?>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-2"></div>
+</div>
+
+</body>
+</html>

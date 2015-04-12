@@ -1,0 +1,15 @@
+<?php echo Form::open(array('url'=>'notice', 'class'=>'form-notice')); ?>		
+
+	<ul>
+		<?php foreach($errors->all() as $error): ?>
+			<li><?php echo $error; ?></li>
+		<?php endforeach; ?>
+	</ul>
+
+	
+	<?php echo Form::text('notice', null, array('class'=>'input-block-level', 'placeholder'=>'Notice')); ?>
+
+	<br>
+	<?php echo Form::submit('Post Notice', array('class'=>'btn btn-large btn-primary btn-block')); ?>
+
+<?php echo Form::close(); ?>

@@ -1,0 +1,76 @@
+<?php $__env->startSection('style'); ?>
+	<?php echo HTML::style('assets/bootstrap-switch-master/build/css/bootstrap3/bootstrap-switch.css'); ?>
+
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('main'); ?>
+
+	<?php if( Session::has('message') ): ?>
+		<div class="alert alert-success alert-block fade in">
+			<button data-dismiss="alert" class="close close-sm" type="button">
+				<i class="fa fa-times"></i>
+			</button>
+
+			<?php echo Session::get('message'); ?>
+
+		</div>
+	<?php endif; ?>
+
+
+
+	<?php $l = Leave::where('status','=','TBR')->get() ?>
+
+	<div class="row">
+
+		<?php foreach($l as $x): ?>
+		<div class="col-md-12">
+			<div class="panel position-center">
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-md-4" style="border-right: solid 2px #eee ">
+							<h3><?php echo $x->requested_by; ?></h3>
+							<h4>date: <?php echo $x->starting_date; ?>-<?php echo $x->ending_date; ?></h4>
+						</div>
+
+						<div class="col-md-7">
+							<p class=""><?php echo $x->reason; ?></p>					
+						</div>
+						<div class="col-md-1">
+							<span class="text-muted"><?php echo $x->id; ?></span>
+						</div>
+					</div>
+					
+					<span class="pull-right">
+					<?php echo Form::open(array('url'=>'review-leave')); ?>
+
+						<?php echo Form::hidden('id',$x->id); ?>
+
+						<?php echo Form::toggle("tgle","Accept","Reject"); ?>
+
+						<?php echo Form::submit('Submit',array('class'=>'btn btn-primary')); ?>
+
+					<?php echo Form::close(); ?>
+
+					</span>
+				</div>
+			</div>
+		</div>		
+		<?php endforeach; ?>		
+	</div>
+
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('script'); ?>	
+	<?php echo HTML::script('js/lib/jquery.js'); ?>
+
+	<?php echo HTML::script('assets/bootstrap-switch-master/build/js/bootstrap-switch.js'); ?>	
+
+	<script type="text/javascript">
+		$(function() {
+		    $('input[type="checkbox"]').not('#create-switch').bootstrapSwitch();
+
+		    
+		});
+	</script>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('users.dashboard', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
