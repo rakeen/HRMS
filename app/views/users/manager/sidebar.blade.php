@@ -5,7 +5,7 @@
                 <ul class="sidebar-menu" id="nav-accordion">
                     
                     <li>
-                        <a class="active" href="index.html">
+                        <a class="active" href="./dashboard">
                             <i class="fa fa-dashboard"></i>
                             <span>Manager Dashboard</span>
                         </a>
@@ -16,11 +16,6 @@
                             <i class="fa fa-laptop"></i>
                             <span>Profile</span>
                         </a>
-                        <ul class="sub">
-                            <li><a href="boxed_page.html">Boxed Page</a></li>
-                            <li><a href="horizontal_menu.html">Horizontal Menu</a></li>
-                            <li><a href="language_switch.html">Language Switch Bar</a></li>
-                        </ul>
                     </li>
 
                     
@@ -37,7 +32,19 @@
                             <span>Employee List</span>
                         </a>
                     </li>
-                    
+
+                    <li>
+                        <a href="/recruite">
+                            <i class="fa fa-star"></i>
+                            <span>Recruite</span>
+                        </a>
+                    </li> 
+                    <li>
+                        <a href="/salary">
+                            <i class="fa fa-bullhorn"></i>
+                            <span>Manage Salary</span>
+                        </a>
+                    </li>                                       
                 </ul>
             </div>
         </div>        

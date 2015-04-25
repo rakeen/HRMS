@@ -1,3 +1,22 @@
+<?php $__env->startSection('main'); ?>
+
+
+<?php if(Session::has('message')): ?>
+    <div class="col-md-12">
+        <div class="alert alert-success alert-block fade in">
+            <button data-dismiss="alert" class="close close-sm" type="button">
+                <i class="fa fa-times"></i>
+            </button>
+            <h4>
+                <i class="icon-ok-sign"></i>
+                Success!
+            </h4>
+            <p><?php echo Session::get('message'); ?></p>
+        </div>
+    </div>
+<?php endif; ?>
+
+
 <?php
 
 $currentDateTime= date('Y-m-d h:i:s');
@@ -10,3 +29,7 @@ echo $currentDateTime;
 	<?php echo Form::submit('Check-In'); ?>
 
 <?php echo Form::close(); ?>
+
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('users.dashboard', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

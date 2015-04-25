@@ -17,7 +17,13 @@
 	    					</div>
 	    					<div class="col-md-8">
 	    						<h2>{{ $u->UserInfo->first_name." ".$u->UserInfo->last_name }}</h2>
-	    						<h5 class="text-muted">{{ $u->designation }}</h5>
+	    						<h5 class="text-muted">{{ $u->designation}}</h5>
+	    						<h3 class="">{{ "Age: ".$u->UserInfo->age }}</h3>
+	    						<h3 class="">{{ "Sex: ".$u->UserInfo->sex }}</h3>
+	    						<h3 class="">{{ "Marital Status: ".$u->UserInfo->marital_status }}</h3>
+	    						<h3 class="">{{ "Birthdate: ".$u->UserInfo->birthdate }}</h3>
+	    						<h3 class="">{{ "Phone: ".$u->UserInfo->phone }}</h3>
+	    						<h3 class="">{{ "Address: ".$u->UserInfo->address }}</h3>
 	    					</div>
 	    				</div>
 

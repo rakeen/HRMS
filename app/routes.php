@@ -16,6 +16,10 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+Route::get('home', function()
+{
+	return View::make('home');
+});
 
 Route::get('apply',function(){
 	return View::make('apply');
@@ -24,13 +28,15 @@ Route::post('apply',array(
 	'uses'=>'HomeController@applyCareer'
 ));
 
-/*
+
+/** testing model binding
 Route::model('user','CurrentUser');
 Route::get('profile/{user}', function(CurrentUser $user)
 {	
     echo $user->userID;
 });
 */
+
 
 Route::get('login', 'HomeController@showLogin');
 Route::post('login','HomeController@doLogin');
@@ -44,15 +50,21 @@ Route::filter('auth', function(){
   if(Auth::guest()) return Redirect::guest('login');
 });
 
+
 Route::get('dashboard',array(
 	"before"=>'auth',
 	"uses"=>'HomeController@Dashboard',
 	"as"=>'dashboard'
 ));
-Route::post('dashboard',array(
+Route::get('checkin',array(
+	"before"=>'auth',
+	"uses"=>'UserController@CheckIn'	
+));
+Route::post('checkin',array(
 	"before"=>'auth',
 	"uses"=>'UserController@postCheckIn',	
 ));
+
 Route::get('profile',array(
 	"before"=>'auth',
 	"uses"=>"UserController@profile"
@@ -68,6 +80,10 @@ Route::get('elist',array(
 ));
 Route::get('recruite',array(
 	"uses"=>"UserController@recruite",
+	"before"=>'auth',
+));
+Route::post('recruite',array(
+	"uses"=>"UserController@pRecruite",
 	"before"=>'auth',
 ));
 
@@ -100,13 +116,18 @@ Route::post('review-leave',array(
 	"uses"=>'UserController@post_review_leave'
 ));
 
-
-Route::post('notice', array(
+Route::get('salary',array(
 	"before"=>'auth',
-	"uses"=>'ManagerController@postLeave'
+	"uses"=>'UserController@salary'
+));
+Route::post('salary',array(
+	"before"=>'auth',
+	"uses"=>'UserController@editSalary'
 ));
 
 
+
+/* custom form element for blade */
 Form::macro('date', function()
 {
     return '<div class="input-group input-large form-group input-lg" data-date="13/07/2013" data-date-format="mm/dd/yyyy">
@@ -127,7 +148,7 @@ Form::macro('toggle',function($name,$on,$off){
 	return $x;	
 });
 
-
+/* for testing purpose */
 Route::get('blank',function(){
 	return View::make('blank');
 });

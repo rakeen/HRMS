@@ -2,9 +2,14 @@
 <html>
 <head>
 	<title>Apply</title>
-	{{ HTML::style('bs3/css/bootstrap.min.css') }}
+
+	{{ HTML::style('css/normalize.min.css') }}
+
+
 	{{ HTML::style('assets/font-awesome/css/font-awesome.css') }}
 	{{ HTML::style('css/style.css') }}
+
+
 </head>
 <body>
 

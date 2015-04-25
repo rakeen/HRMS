@@ -40,7 +40,7 @@ class HomeController extends BaseController {
 		// check if the inputs are valid!   -> important for Security! B-)
 		$rules = array(
 		    'email'    => 'required|email', // make sure the email is an actual email
-		    'password' => 'required|alphaNum|min:5' // password can only be alphanumeric and has to be greater than 3 characters
+		    'password' => 'required|min:5'
 		);
 
 		$validator = Validator::make(Input::all(), $rules);

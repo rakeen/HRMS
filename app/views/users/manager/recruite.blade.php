@@ -2,6 +2,23 @@
 
 @section('main')
 
+@if(Session::has('message'))
+    <div class="col-md-12">
+        <div class="alert alert-success alert-block fade in">
+            <button data-dismiss="alert" class="close close-sm" type="button">
+                <i class="fa fa-times"></i>
+            </button>
+            <h4>
+                <i class="icon-ok-sign"></i>
+                Success!
+            </h4>
+            <p>{{ Session::get('message') }}</p>
+        </div>
+    </div>
+@endif
+
+
+
 <?php $ulist = UserInfo::where('userID','=',null)->get() ?>
 {{-- ->get() converts it to an array of object! :D --}}
 
@@ -25,8 +42,19 @@
 	    						<span class="pull-right">
 
 	    							<button class="btn btn-info">Mail for Interview</button>
-		    						<button class="btn btn-danger">Reject</button>
-		    						<button class="btn btn-primary">Recruite</button>
+
+	    							{{ Form::open(array('url' => 'recruite')) }}
+	    							{{ Form::hidden('uid',$u->email) }}
+	    							{{ Form::hidden('result','Rejected') }}
+	    							{{ Form::submit('Reject', array('class'=>'btn btn-danger'))}}
+	    							{{ Form::close() }}
+
+	    							{{ Form::open(array('url' => 'recruite')) }}
+	    							{{ Form::hidden('uid',$u->email) }}
+	    							{{ Form::hidden('result','Recruited') }}
+	    							{{ Form::submit('Recruite', array('class'=>'btn btn-primary'))}}
+	    							{{ Form::close() }}
+
 		    						
 	    						</span>
 	    					</div>

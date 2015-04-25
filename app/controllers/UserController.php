@@ -3,12 +3,21 @@
 class UserController extends BaseController {
 
 
+/**
+*	Controllers for both Employee and Manager
+*/
+
+	public function checkin(){
+		return View::make('users.checkin');
+	}
+
 	public function postCheckIn(){		
 		$db = new Checkin();
 		$db->checkin= Input::get('checkin');		
 		$db->save();
 
-		echo Input::get('checkin');
+		//echo Input::get('checkin');
+		return Redirect::to('checkin')->with('message',"checkin successful!");
 	}
 
 	public function postCheckOut(){		
@@ -64,6 +73,7 @@ class UserController extends BaseController {
 								'github_id'=>Input::get('github'),
 								'linkedin_id'=>Input::get('linkedin'),
 								));
+
 		return Redirect::to('profile')->with('message',"Profile Updated!")->withInput();
 	}
 
@@ -78,7 +88,30 @@ class UserController extends BaseController {
 	}
 
 	public function recruite(){
-		if(Auth::user()->user_type!="Manager") return View::make('users.manager.recruite');
+		if(Auth::user()->user_type=="Manager") return View::make('users.manager.recruite');
 		else return Response::view('errors.404',array(),404);
+	}
+	public function pRecruite(){
+		if(Input::get('result')=='Rejected'){
+			$u=UserInfo::where('email','=',Input::get('uid'))
+						->update(array('userID'=>'NA'));
+
+			return Redirect::to('recruite')->with('message',"rejected!");
+		}
+		else{
+			return Redirect::to('recruite')->with('message',"recruited!");
+		}
+	}
+
+	public function salary(){
+		return View::make('users.manager.salary');
+	}
+	public function editSalary(){
+		$uid=UserFin::where('userID','=',Input::get('uid'))
+						->update(array(
+							'salary'=>Input::get('salary')
+							));
+
+		return Redirect::to('salary')->with('message',"Salary Updated!");
 	}
 }

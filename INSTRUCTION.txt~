@@ -1,0 +1,17 @@
+Welcom to the instructsion panel of our project.
+
+Steps:
+
+Unzip the HRMS.zip file.
+Start the xampp Apache server and mysql from the xampp control panel.
+Place the HRMS folder unzipped from the .zip file into the public folder htdocs folder in the xampp directory
+Configure the database in the ./app/config/database.php
+	on the connections array, write the database credentials
+Import the attached sql file
+Access the project from  http://localhost/HRMS/public/
+
+First, the default login page will come.
+Here, the email address acts as the userid. 
+Default manager/main admin:
+	email: chris@scotch.io
+	password: awesome

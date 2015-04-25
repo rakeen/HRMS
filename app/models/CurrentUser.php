@@ -29,5 +29,8 @@ class CurrentUser extends Eloquent implements UserInterface, RemindableInterface
 	public function UserProfile(){
 		return $this->hasOne('UserProfile','userID','userID');
 	}
+	public function UserFin(){
+		return $this->hasOne('UserFin','userID','userID');
+	}
 	
 }

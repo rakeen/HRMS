@@ -17,6 +17,12 @@
 	    					<div class="col-md-8">
 	    						<h2><?php echo $u->UserInfo->first_name." ".$u->UserInfo->last_name; ?></h2>
 	    						<h5 class="text-muted"><?php echo $u->designation; ?></h5>
+	    						<h3 class=""><?php echo "Age: ".$u->UserInfo->age; ?></h3>
+	    						<h3 class=""><?php echo "Sex: ".$u->UserInfo->sex; ?></h3>
+	    						<h3 class=""><?php echo "Marital Status: ".$u->UserInfo->marital_status; ?></h3>
+	    						<h3 class=""><?php echo "Birthdate: ".$u->UserInfo->birthdate; ?></h3>
+	    						<h3 class=""><?php echo "Phone: ".$u->UserInfo->phone; ?></h3>
+	    						<h3 class=""><?php echo "Address: ".$u->UserInfo->address; ?></h3>
 	    					</div>
 	    				</div>
 

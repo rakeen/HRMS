@@ -2,6 +2,22 @@
 @extends('users.dashboard')
 
 @section('main')
+
+	@if(Session::has('message'))
+        <div class="col-md-12">
+            <div class="alert alert-success alert-block fade in">
+                <button data-dismiss="alert" class="close close-sm" type="button">
+                    <i class="fa fa-times"></i>
+                </button>
+                <h4>
+                    <i class="icon-ok-sign"></i>
+                    Success!
+                </h4>
+                <p>{{ Session::get('message') }}</p>
+            </div>
+        </div>
+    @endif
+
 	<div class="row">
 	    
 	    	<?php $notices = Notice::all() ?>

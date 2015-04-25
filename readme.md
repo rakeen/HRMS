@@ -28,6 +28,13 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ### ToDo:
 
+- add the responsive styles
+- un-hide BT
+- add user avatars
+- add the logo
+- do something so that the DB tables get created automatically after visiting the first page
+- upload file,store file(pro pic,cv etc)
+- implement the recruite section(call for interview)
 - link to profile of other user
 - login with email and delete email from CurrentUser table
 - uncomment css font and cdnjs files on dashboard and style.css
@@ -59,6 +66,5 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 - model relations must specify both the foreign key and local key
 - Auth::User() doesn't change. even if you change your model name
 
-### Reference:
 
-- 
+### Reference:

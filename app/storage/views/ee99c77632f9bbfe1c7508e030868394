@@ -1,7 +1,7 @@
 <?php $__env->startSection('main'); ?>
 
 	<?php if( Session::has('message') ): ?>
-	<div class="alert alert-success alert-block fade-in">
+	<div class="alert alert-success alert-block fade in">
 		<button data-dismiss="alert" class="close close-sm" type="button">
 			<i class="fa fa-times"></i>
 		</button>
@@ -31,7 +31,6 @@
 	</div>
 
 <?php $__env->stopSection(); ?>
-
 
 <?php $__env->startSection('script'); ?>
 	<?php echo HTML::script('assets/bootstrap-daterangepicker/moment.min.js'); ?>

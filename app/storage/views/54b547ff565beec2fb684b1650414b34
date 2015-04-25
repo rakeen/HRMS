@@ -5,7 +5,7 @@
                 <ul class="sidebar-menu" id="nav-accordion">
                     
                     <li>
-                        <a class="active" href="index.html">
+                        <a class="active" href="/dashboard">
                             <i class="fa fa-dashboard"></i>
                             <span>Employee Dashboard</span>
                         </a>
@@ -16,13 +16,21 @@
                             <i class="fa fa-laptop"></i>
                             <span>Profile</span>
                         </a>
-                        <ul class="sub">
-                            <li><a href="boxed_page.html">Boxed Page</a></li>
-                            <li><a href="horizontal_menu.html">Horizontal Menu</a></li>
-                            <li><a href="language_switch.html">Language Switch Bar</a></li>
-                        </ul>
+                    </li>
+                    
+                    <li class="sub-menu">
+                        <a href="/checkin">
+                            <i class="fa fa-star"></i>
+                            <span>Checkin</span>
+                        </a>
                     </li>
 
+                    <li class="sub-menu">
+                        <a href="/leave">
+                            <i class="fa fa-star"></i>
+                            <span>Leave Application</span>
+                        </a>
+                    </li>
                     
                     <li>
                         <a href="/notice">

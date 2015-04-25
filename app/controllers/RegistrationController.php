@@ -13,13 +13,19 @@ class RegistrationController extends BaseController{
 		
 		$rules = array(
 			'email'=>'required|email|exists:users_info,email',
-			'password'=>'required|alpha_num|between:6,12|confirmed',
-			'password_confirmation'=>'required|alpha_num|between:6,12'
+			'password'=>'required|between:6,22|confirmed',
+			'password_confirmation'=>'required|between:6,22' // |alpha_num|
 		);
 
 		$validator = Validator::make(Input::all(),$rules);
 
 		if($validator->passes()){
+
+			$u=UserInfo::where('email','=',Input::get('email'))->first(); // ->get()  converts them into an array. usefull for looping
+			if($u->userID =="NA"){
+				return Redirect::to('register')->with('message',"Sorry, but you've been rejected! :(")->withInput();
+			}
+
 			$user = new CurrentUser;			
 
 			$userID = "SE".str_random(3);
@@ -42,7 +48,7 @@ class RegistrationController extends BaseController{
 			$up->userID=$userID;
 			$up->save();
 
-			echo "success";
+			return Redirect::to('login')->with('message',"welcome to HRMS! please login to continue.");
 		}
 		else{
 			return Redirect::to('register')
