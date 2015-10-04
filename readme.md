@@ -11,19 +11,16 @@ For more info on how to use see *INSTRUCTION.txt~*
 
 ### ToDo:
 
-- add the responsive styles
-- un-hide BT
-- add user avatars
-- add the logo
-- do something so that the DB tables get created automatically after visiting the first page
-- upload file,store file(pro pic,cv etc)
-- implement the recruite section(call for interview)
-- link to profile of other user
-- login with email and delete email from CurrentUser table
-- uncomment css font and cdnjs files on dashboard and style.css
+- [ ] add user avatars
+- [ ] do something so that the DB tables get created automatically after visiting the first page
+- [ ] link to profile of other user
+- [x] add the responsive styles
+- [x] upload file,store file(pro pic,cv etc)
+- [x] implement the recruite section(call for interview)
+- [x] login with email and delete email from CurrentUser table
 
-- paginated notice,elist
-- search(data binding?) in notice,elist
+- [ ] paginated notice,elist
+- [ ]search(data binding?) in notice,elist
 
 
 ### Problems Faced:
