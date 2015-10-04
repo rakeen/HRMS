@@ -5,7 +5,8 @@
 Human Resource Management System.  
 For more info on how to use see *INSTRUCTION.txt~*
 
-##(http://hrms-rak1.c9.io/public/home)[project page]
+##[Project page](http://hrms-rak1.c9.io/public/home)
+
 -------------------------------------------------------------------
 
 ### ToDo:
@@ -54,7 +55,7 @@ For more info on how to use see *INSTRUCTION.txt~*
 
 ### Credits:
 
-- (http://bucketadmin.themebucket.net/)[BucketAdmin by Themebucket]
-- (http://laravel.com/docs/4.2/releases)[Laravel 4.2]
-- (http://codepen.io)[Codepen]
-- (https://unsplash.com/)[Unplash]
+- [BucketAdmin by Themebucket](http://bucketadmin.themebucket.net/)
+- [Laravel 4.2](http://laravel.com/docs/4.2/releases)
+- [Codepen](http://codepen.io)
+- [Unplash](https://unsplash.com/)
