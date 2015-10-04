@@ -20,7 +20,7 @@ For more info on how to use see *INSTRUCTION.txt~*
 - [x] login with email and delete email from CurrentUser table
 
 - [ ] paginated notice,elist
-- [ ]search(data binding?) in notice,elist
+- [ ] search(data binding?) in notice,elist
 
 
 ### Problems Faced:
