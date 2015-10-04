@@ -15,3 +15,12 @@ Here, the email address acts as the userid.
 Default manager/main admin:
 	email: chris@scotch.io
 	password: awesome
+
+
+Available Pages:
+
+/public/home
+/public/login
+/public/register
+/public/dashboard
+/public/logout
