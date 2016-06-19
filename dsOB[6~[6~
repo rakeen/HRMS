@@ -1,0 +1,97 @@
+[33mcommit 3b439e7f9c89688938d7b8f295e4cbaf387af145[m
+Author: Shadman Rakeen <rakeen09@gmail.com>
+Date:   Sun Jun 19 06:01:05 2016 +0000
+
+    added screenshots
+
+[33mcommit 29089957a803d949e4b496b0a3bc22d0fd076d51[m
+Author: Shadman Rakeen <rakeen09@users.noreply.github.com>
+Date:   Sat Oct 10 08:03:01 2015 +0600
+
+    fix badge link!
+
+[33mcommit 7c59346dba336f3533ab3fab74d9cabc33a817b7[m
+Author: Shadman Rakeen <rakeen09@users.noreply.github.com>
+Date:   Sat Oct 10 08:01:13 2015 +0600
+
+    added badge ^_^
+    
+    ref: http://shields.io/
+
+[33mcommit abd8ea7519477556388b51688db6adf6c39fda1d[m
+Author: Shadman Rakeen <rakeen09@users.noreply.github.com>
+Date:   Mon Oct 5 02:39:58 2015 +0600
+
+    Update INSTRUCTION.txt~
+
+[33mcommit 5d8f7954cd1be988c1b2097f818a0c3802d48915[m
+Author: Shadman Rakeen <rakeen09@users.noreply.github.com>
+Date:   Mon Oct 5 02:37:46 2015 +0600
+
+    Update readme.md
+
+[33mcommit 37e86144be0fbca8b13e4a2775b622034b290ba4[m
+Author: Shadman Rakeen <rakeen09@users.noreply.github.com>
+Date:   Mon Oct 5 02:37:23 2015 +0600
+
+    Update readme.md
+
+[33mcommit 7fe64c8de5e9021e055e072d5c155c74e5f94474[m
+Author: Shadman Rakeen <rakeen09@users.noreply.github.com>
+Date:   Mon Oct 5 02:34:55 2015 +0600
+
+    Update readme.md
+
+[33mcommit 053e261d77c79301c3c7d273e26b73700df96f01[m
+Author: Shadman Rakeen <rakeen09@users.noreply.github.com>
+Date:   Mon Oct 5 02:31:50 2015 +0600
+
+    Update readme.md
+
+[33mcommit 614e2f2376028cdb2ff6c7aaa9dbda2d98fb0f08[m
+Author: Shadman Rakeen <rakeen09@gmail.com>
+Date:   Sat Apr 25 23:30:49 2015 +0600
+
+    *Showed in Final Project*
+
+[33mcommit f947ddd2fd63d1a9112c559837dd87b07d24da17[m
+Author: Shadman Rakeen <rakeen09@gmail.com>
+Date:   Sun Apr 12 19:53:00 2015 +0600
+
+    trying to add vendor despite of gitignore
+
+[33mcommit 1b1664998534450e84a269e6d86f9ba3ec08f8a7[m
+Author: Shadman Rakeen <rakeen09@gmail.com>
+Date:   Wed Apr 8 13:09:57 2015 +0600
+
+    apply page+more
+
+[33mcommit e15bdc6e6d27cc341339be3c02d82a69bec6e30e[m
+Author: Shadman Rakeen <rakeen09@gmail.com>
+Date:   Sun Apr 5 17:06:55 2015 +0600
+
+    flash msg,edit progile,notice,elist
+
+[33mcommit 78171df6d2ef68805281325c3485a31212d742b6[m
+Author: Shadman Rakeen <rakeen09@gmail.com>
+Date:   Sat Apr 4 10:18:26 2015 +0600
+
+    refactored tables|added profile
+
+[33mcommit ce3a642bbe6ff40999c7ed1c3015e9ed177cac02[m
+Author: Shadman Rakeen <rakeen09@gmail.com>
+Date:   Sat Mar 14 18:56:20 2015 +0600
+
+    added checkin view to dahsboard
+
+[33mcommit afa6943ad7d2ed9700732e317d0700edc64e36be[m
+Author: Shadman Rakeen <rakeen09@gmail.com>
+Date:   Fri Mar 13 20:13:55 2015 +0600
+
+    added structured dashboard view,user type and filter
+
+[33mcommit f6b77bc4ed13484be92a04007399cfe1dd4fcfd6[m
+Author: Shadman Rakeen <rakeen09@gmail.com>
+Date:   Wed Feb 25 23:18:08 2015 +0600
+
+    laravel project created

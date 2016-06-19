@@ -6,14 +6,8 @@
 Human Resource Management System.  
 For more info on how to use see *INSTRUCTION.txt~*
 
-<<<<<<< HEAD
-##[Project page](http://hrms-rak1.c9.io/public/home)
 
--------------------------------------------------------------------
-=======
 ![homepage](./screenshots/home.png)
-
->>>>>>> added screenshots
 
 ### ToDo:
 
